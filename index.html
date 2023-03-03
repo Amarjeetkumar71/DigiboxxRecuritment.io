@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Digibox Recruitment Portal - Login</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0e4ec; /* light pink */
+        color: #3d314a; /* dark purple */
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 50px;
+      }
+      #profile-box {
+        border: 1px solid #3d314a; /* dark purple */
+        padding: 10px;
+        margin-top: 50px;
+      }
+      #profile-box ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      #profile-box li {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: #3d314a; /* dark purple */
+      }
+      #profile-box li:hover {
+        background-color: #b4a7d6; /* light purple */
+      }
+      label {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      input[type="text"], input[type="password"] {
+        padding: 5px;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      input[type="submit"], button {
+        background-color: #3d314a; /* dark purple */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      input[type="submit"]:hover, button:hover {
+        background-color: #b4a7d6; /* light purple */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Digibox Recruitment Portal</h1>
+    <div id="profile-box">
+      <h3>Please Select Your Profile:</h3>
+      <ul>
+        <li id="recruiter">Recruiter</li>
+        <li id="student">Student</li>
+      </ul>
+    </div>
+      <script>
+        const recruiter = document.getElementById('recruiter');
+        const student = document.getElementById('student');
+       
+        // add click event listener to recruiter list item
+        recruiter.addEventListener('click', function() {
+          window.location.href = 'recruiter.html'; // redirect to abc.html
+        });
+       
+        // add click event listener to student list item
+        student.addEventListener('click', function() {
+          window.location.href = 'student.html'; // redirect to abd.html
+        });
+      </script>
+      
+  </body>
+</html>

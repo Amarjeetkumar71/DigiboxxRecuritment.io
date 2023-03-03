@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enter Your Candidature</title>
+	<style>
+		/* style for the top center title */
+		#title {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 10px 0;
+			text-align: center;
+		}
+
+		/* style for the top right welcome message */
+		#welcome {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+
+		/* style for the job application form */
+		#application-form {
+			margin: 0 auto;
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 50%;
+		}
+
+		form {
+			margin: 0 auto;
+			text-align: left;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"],
+		input[type="file"] {
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 100%;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 10px;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+
+	</style>
+</head>
+<body>
+    <div id="header">
+        <div id="title">Enter Your Candidature</div>
+        <div id="welcome">Welcome Candidate</div>
+    </div>
+	<div id="application-form">
+		<form action="" method="post" enctype="multipart/form-data">
+			<img src="" alt="Your Image" id="preview" style="display:none;max-width:150px;"> <!-- this will show a preview of the uploaded image -->
+			<label for="image">Upload Your Image:</label>
+			<input type="file" id="image" name="image" onchange="showPreview(this);" required> <!-- this will trigger the showPreview function to display the preview image -->
+
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="age">Age:</label>
+			<input type="text" id="age" name="age" required>
+
+			<label for="resume">Upload Your Resume:</label>
+			<input type="file" id="resume" name="resume" required>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
+	<script>
+		// function to display a preview of the uploaded image
+		function showPreview(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					document.getElementById("preview").style.display = "block";
+					document.getElementById("preview").src = e.target.result;
+				};
+
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+	</script>
+</body>x
+</html>

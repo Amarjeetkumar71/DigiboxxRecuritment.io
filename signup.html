@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recruitment Portal Signup</title>
+    <style>
+      body {
+        background-color: #f0ebeb;
+        text-align: center;
+      }
+
+      form {
+        display: inline-block;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        text-align: left;
+      }
+
+      h1 {
+        color: #191970;
+      }
+
+      ul {
+        text-align: left;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      label {
+        display: inline-block;
+        width: 120px;
+        text-align: right;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      select {
+        margin-left: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 250px;
+      }
+
+      input[type="submit"] {
+        background-color: #191970;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-left: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Create Your Account</h1>
+    <form>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      
+      <label for="usertype">Select a profile:</label>
+      <select id="usertype" name="usertype">
+        <option value="recruiter">Recruiter</option>
+        <option value="student">Student</option>
+      </select><br><br>
+      <h4>Username has to be unique</h4>
+      <h4>Passwords should have</h4>
+      <ul>
+        <li>At least 1 uppercase letter</li>
+        <li>At least 1 special character</li>
+        <li>At least 8 characters long</li>
+      </ul>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
